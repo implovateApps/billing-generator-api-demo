@@ -6,10 +6,10 @@ from google.cloud import tasks_v2
 app = Flask(__name__)
 
 # --- CONFIGURATION ---
-PROJECT_ID = "YOUR-PROJECT-ID"       # <-- Change this!
+PROJECT_ID = "methodical-ace-482313-m2"       # <-- Change this!
 LOCATION = "us-central1"             # <-- Change this!
 QUEUE_ID = "billing-queue"
-WEBHOOK_URL = "YOUR_WEBHOOK_SITE_URL" # <-- Paste your webhook.site URL here!
+WEBHOOK_URL = "https://webhook.site/00194eb7-606a-47f1-9bdf-ad41c3050c84" # <-- Paste your webhook.site URL here!
 
 client = tasks_v2.CloudTasksClient()
 parent = client.queue_path(PROJECT_ID, LOCATION, QUEUE_ID)
